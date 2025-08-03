@@ -1,0 +1,50 @@
+# Node.js modullari
+node_modules/
+
+# Log fayllari
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Atrof-muhit (environment) fayllari (masalan, API kalitlari yoki bot tokenlari)
+.env
+.env.*
+!.env.example
+
+# Ishlab chiqarish (build) natijalari
+dist/
+build/
+
+# Kesh fayllari
+.cache
+.parcel-cache
+.npm
+.eslintcache
+.stylelintcache
+
+# Test va qoplama (coverage) fayllari
+coverage/
+.nyc_output
+*.lcov
+
+# Vaqtinchalik fayllar
+*.pid
+*.seed
+*.pid.lock
+.node_repl_history
+*.tgz
+
+# Operatsion tizim fayllari
+.DS_Store
+Thumbs.db
+
+# IDE va muharrir fayllari
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

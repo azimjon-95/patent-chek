@@ -1,0 +1,22 @@
+{
+    "name": "konkurs-bot",
+    "version": "1.0.0",
+    "description": "Baxt Buildings konkurs bot",
+    "main": "bot.js",
+    "scripts": {
+        "start": "nodemon bot.js"
+    },
+    "dependencies": {
+        "axios": "^1.6.0",
+        "dotenv": "^16.0.3",
+        "image-size": "^2.0.2",
+        "mongoose": "^7.0.0",
+        "node-telegram-bot-api": "^0.66.0",
+        "nodemon": "^3.1.10",
+        "path": "^0.12.7",
+        "pdf-poppler": "^0.2.1",
+        "puppeteer": "^24.15.0",
+        "sharp": "^0.34.3",
+        "telegraf": "^4.12.2"
+    }
+}

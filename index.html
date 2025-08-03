@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+
+            width: 350px;
+            height: 100vh;
+
+            /* px;
+
+            height: $ {
+                imgHeightPx
+            } */
+
+            margin: 0 auto;
+            background-image: url('./img/Документ.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            color: black;
+            text-align: left;
+            line-height: 1.2;
+        }
+
+        #date {
+            top: 90px;
+            font-size: 27.5px;
+            padding: 4px 30px 4px 0px;
+            left: 36px;
+            background: #ffffff95;
+        }
+
+        #name {
+            top: 266px;
+            font-size: 28px;
+            background: #ffffff;
+            padding: 4px 0px 4px 0px;
+            letter-spacing: 1px;
+            width: 71%;
+            left: 33px;
+        }
+
+        #nameTwo {
+            top: 35.9%;
+            font-size: 25px;
+            background: #ffffff;
+            padding: 4px 0px 4px 0px;
+            letter-spacing: 1px;
+            width: 71%;
+            left: 33.7px;
+        }
+
+        #amount {
+            bottom: 468px;
+            left: 32px;
+            font-size: 25px;
+            background: #ffffff;
+            padding: 4px 0px 4px 0px;
+            letter-spacing: 1px;
+            width: 71%;
+        }
+
+        #amountTwo {
+            bottom: 310px;
+            left: 32px;
+            font-size: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            background: #ffffff;
+            padding: 4px 0px 4px 0px;
+            letter-spacing: 1px;
+            width: 71%;
+        }
+
+        #amountText {
+            bottom: 214px;
+            left: 32px;
+            font-size: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            background: #ffffff;
+            padding: 4px 0px 4px 0px;
+            letter-spacing: .8px;
+            width: 87%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay" id="date">${dateText}</div>
+        <div class="overlay" id="name">Иванов Иван Иванович</div>
+        <div class="overlay" id="nameTwo">Иванов Иван Иванович</div>
+        <div class="overlay" id="amount">17 800,00</div>
+        <div class="overlay" id="amountTwo">17 800,00</div>
+        <div class="overlay" id="amountText">${amountWords}</div>
+    </div>
+</body>
+
+</html>
