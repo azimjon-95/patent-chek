@@ -13,6 +13,10 @@ require('dotenv').config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 const sessions = new Map();
 
+async () => await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
 
 // Til sozlamalari
 const languages = {
