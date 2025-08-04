@@ -13,10 +13,6 @@ require('dotenv').config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 const sessions = new Map();
 
-// Set webhook
-const WEBHOOK_URL = `https://patent-chek.vercel.app/api/telegram`;
-bot.setWebHook(WEBHOOK_URL);
-
 
 // Til sozlamalari
 const languages = {
@@ -477,8 +473,11 @@ app.post('/api/telegram', (req, res) => {
 });
 
 // Start server for Vercel
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
+    bot.setWebHook(
+        `${process.env.RENDER_PUBLIC_URL}/bot${process.env.BOT_TOKEN}`
+    )
 });
 module.exports = app;
