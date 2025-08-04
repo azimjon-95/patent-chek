@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "Baxt Buildings konkurs bot",
     "main": "bot.js",
+    "engines": {
+        "node": "18.x"
+    },
     "scripts": {
         "start": "nodemon bot.js"
     },

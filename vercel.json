@@ -2,17 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "bot.js",
+            "src": "./index.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "/api/telegram",
-            "dest": "bot.js"
+            "src": "/(.*)",
+            "dest": "/"
         }
-    ],
-    "env": {
-        "NODE_ENV": "production"
-    }
+    ]
 }
