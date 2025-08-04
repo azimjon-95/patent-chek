@@ -409,7 +409,13 @@ bot.on('message', async (msg) => {
             // Processing xabarini o'chirish
             bot.deleteMessage(chatId, processingMsg.message_id);
 
-            await bot.sendDocument(chatId, pdfPath, {}, { contentType: 'application/pdf' });
+            // await bot.sendDocument(chatId, pdfPath, {}, { contentType: 'application/pdf' });
+            // await bot.sendDocument(chatId, pdfPath);
+            const fileStream = fs.createReadStream(pdfPath);
+            await bot.sendDocument(chatId, fileStream, {
+                filename: path.basename(pdfPath)
+            });
+
             bot.sendMessage(chatId, lang.success, { parse_mode: 'HTML' });
 
             // Vaqtinchalik fayllarni o'chirish
