@@ -83,19 +83,27 @@ function createLanguageKeyboard() {
 
 // dateText ni tahlil qilib YYYY-MM-DD-HH_MM_SS formatiga o'tkazish
 function parseDateText(dateText) {
+    console.log(">>>>", dateText);
     const months = {
-        'января': '01', 'февраля': '02', 'марта': '03', 'апреля': '04',
-        'мая': '05', 'июня': '06', 'июля': '07', 'августа': '08',
-        'сентября': '09', 'октября': '10', 'ноября': '11', 'декабря': '12'
+        'янв': '01',
+        'фев': '02',
+        'мар': '03',
+        'апр': '04',
+        'май': '05', // "мая" ham shu
+        'июн': '06',
+        'июл': '07',
+        'авг': '08',
+        'сен': '09',
+        'окт': '10',
+        'ноя': '11',
+        'дек': '12'
     };
 
-    // Masalan: "11 июля 2025 16:17:50 мск"
-    const regex = /^(\d{1,2})\s+(\S+)\s+(\d{4})\s+(\d{2}):(\d{2}):(\d{2})\s+мск$/;
+    // Universal regex — oy nomining boshidagi 3 harfini tekshiradi, qolganlari bo‘lishi mumkin
+    const regex = /^(\d{1,2})\s+([а-яё]{3})[а-яё]*\s+(\d{4}),?\s+(\d{2}):(\d{2}):(\d{2})\s+мск$/i;
+
     const match = dateText.match(regex);
 
-    if (!match) {
-        throw new Error('Invalid date format');
-    }
 
     const [, day, monthText, year, hours, minutes, seconds] = match;
     const month = months[monthText.toLowerCase()];
